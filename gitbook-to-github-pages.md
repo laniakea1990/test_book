@@ -86,22 +86,22 @@ $ gitbook serve
 
   但是这样来回切换非常麻烦，所以可以写个"build.sh"脚本，然后就可以一直在master分支上进行编辑：
 
-    ```bash
-    #!/bin/sh
-    rm -rf _book
-    echo "Start building the gitbook!"
-    gitbook build
-    cd _book
-    echo "Init a git repo, and create gh-pages branch."
-    git init 
-    git checkout --orphan gh-pages
-    git add .
-    echo "commit gitbook file"
-    git commit -m "Auto publisher"
-    git remote add origin https://github.com/laniakea1990/test_book.git 
-    echo "push gh-pages branch to origin"
-    git push --force -u origin gh-pages > /dev/null 2>&1
-    ```
+  ```bash
+  #!/bin/sh
+  rm -rf _book
+  echo "Start building the gitbook!"
+  gitbook build
+  cd _book
+  echo "Init a git repo, and create gh-pages branch."
+  git init 
+  git checkout --orphan gh-pages
+  git add .
+  echo "commit gitbook file"
+  git commit -m "Auto publisher"
+  git remote add origin https://github.com/laniakea1990/test_book.git 
+  echo "push gh-pages branch to origin"
+  git push --force -u origin gh-pages > /dev/null 2>&1
+  ```
 
 
 
