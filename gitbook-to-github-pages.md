@@ -63,7 +63,7 @@ $ gitbook serve
 
 * 源码那个分支需要将\_book屏蔽掉，因此新建一个.gitignore, 内容为\_book,也可以根据个人需要添加需要屏蔽的后缀或者文件夹。然后新建仓库，将源码添加至master分支并推送到github，具体命令如下：
 
-* ```
+  ```
   git init
   git add .
   git commit -m "master's version"
@@ -72,7 +72,7 @@ $ gitbook serve
   ```
 * 在书籍\_book录下新建仓库新建gh-pages分支，并将网页添加至该分支，最后推送到github。具体命令如下（\#号后为说明）：
 
-* ```
+  ```
   cd _book \#进入到_book目录
   git init \#新建仓库
   git -rm .gitignore \#删除.gitignore文件
@@ -86,18 +86,22 @@ $ gitbook serve
 
   但是这样来回切换非常麻烦，所以可以写个"build.sh"脚本，然后就可以一直在master分支上进行编辑：
 
-```bash
+    ```bash
     #!/bin/sh
     rm -rf _book
+    echo "Start building the gitbook!"
     gitbook build
     cd _book
+    echo "Init a git repo, and create gh-pages branch."
     git init 
     git checkout --orphan gh-pages
     git add .
+    echo "commit gitbook file"
     git commit -m "Auto publisher"
     git remote add origin https://github.com/laniakea1990/test_book.git 
+    echo "push gh-pages branch to origin"
     git push --force -u origin gh-pages > /dev/null 2>&1
-```
+    ```
 
 
 
