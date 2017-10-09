@@ -70,6 +70,7 @@ $ gitbook serve
   git remote add origin https://github.com/aaa/book.git
   git push -u origin master
   ```
+
 * 在书籍\_book录下新建仓库新建gh-pages分支，并将网页添加至该分支，最后推送到github。具体命令如下（\#号后为说明）：
 
   ```
@@ -82,6 +83,7 @@ $ gitbook serve
   git remote add origin https://github.com/aaa/book.git \#给远程仓库设置昵称
   git push -u origin gh-pages \#推送gh-pages分支内容到远程
   ```
+
 * 最后在github进入到项目，settings-GitHub Pages-source-选择gh-pages，过一会打开Github pages那里给出的网址就可以看到网页了。
 
   但是这样来回切换非常麻烦，所以可以写个"build.sh"脚本，然后就可以一直在master分支上进行编辑：
