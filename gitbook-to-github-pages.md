@@ -84,5 +84,20 @@ $ gitbook serve
   ```
 * 最后在github进入到项目，settings-GitHub Pages-source-选择gh-pages，过一会打开Github pages那里给出的网址就可以看到网页了。
 
-    但是这样来回切换非常麻烦，所以可以写个build脚本，然后就可以一直在master分支上进行编辑了。
+  但是这样来回切换非常麻烦，所以可以写个"build.sh"脚本，然后就可以一直在master分支上进行编辑：
+
+```bash
+    #!/bin/sh
+    rm -rf _book
+    gitbook build
+    cd _book
+    git init 
+    git checkout --orphan gh-pages
+    git add .
+    git commit -m "Auto publisher"
+    git remote add origin https://github.com/laniakea1990/test_book.git 
+    git push --force -u origin gh-pages > /dev/null 2>&1
+```
+
+
 
