@@ -49,6 +49,9 @@
         }, 
         "sectionx": {
             "tag": "b"
+        },
+        "disqus": {
+        "shortName": "gitbookuse"
         }
     }
 }
