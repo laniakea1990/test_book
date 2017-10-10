@@ -19,7 +19,8 @@
         "splitter", 
         "expandable-chapters-small", 
         "sectionx", 
-        "anchor-navigation-ex"
+        "anchor-navigation-ex",
+        "todo"
     ], 
     "pluginsConfig": {
         "theme-default": {
