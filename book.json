@@ -15,16 +15,10 @@
         "prism-themes", 
         "anchors", 
         "include-codeblock", 
-        "ace", 
         "emphasize", 
-        "katex", 
         "splitter", 
-        "mermaid", 
-        "tbfed-pagefooter", 
         "expandable-chapters-small", 
         "sectionx", 
-        "local-video", 
-        "sitemap-general", 
         "anchor-navigation-ex"
     ], 
     "pluginsConfig": {
@@ -41,27 +35,9 @@
             "unindent": true, 
             "edit": true
         }, 
-        "sharing": {
-            "weibo": true, 
-            "facebook": true, 
-            "twitter": true, 
-            "google": false, 
-            "instapaper": false, 
-            "vk": false, 
-            "all": [
-                "facebook", 
-                "google", 
-                "twitter", 
-                "weibo", 
-                "instapaper"
-            ]
-        }, 
         "simple-page-toc": {
             "maxDepth": 3, 
             "skipFirstH1": true
-        }, 
-        "sitemap-general": {
-            "prefix": "http://gitbook.zhangjikai.com"
         }, 
         "anchor-navigation-ex": {
             "isRewritePageTitle": false, 
