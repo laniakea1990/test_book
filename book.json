@@ -25,9 +25,8 @@
         "sectionx", 
         "local-video", 
         "sitemap-general", 
-        "anchor-navigation-ex",  
-        "todo" 
-    ], 
+        "anchor-navigation-ex"
+            ], 
     "pluginsConfig": {
         "theme-default": {
             "showLevel": true
