@@ -1,0 +1,82 @@
+{
+    "title": "Implement CI/CD with Docker and Jenkins", 
+    "description": "利用Docker及Jenkins Pipeline实现微服务的CI/CD", 
+    "author": "jrr", 
+    "output.name": "site", 
+    "language": "zh-hans", 
+    "plugins": [
+        "-lunr", 
+        "-search", 
+        "-highlight", 
+        "-livereload", 
+        "search-plus", 
+        "simple-page-toc", 
+        "prism", 
+        "prism-themes", 
+        "anchors", 
+        "include-codeblock", 
+        "ace", 
+        "emphasize", 
+        "katex", 
+        "splitter", 
+        "mermaid", 
+        "tbfed-pagefooter", 
+        "expandable-chapters-small", 
+        "sectionx", 
+        "local-video", 
+        "sitemap-general", 
+        "anchor-navigation-ex", 
+        "favicon", 
+        "todo" 
+    ], 
+    "pluginsConfig": {
+        "theme-default": {
+            "showLevel": true
+        }, 
+        "prism": {
+            "css": [
+                "prism-themes/themes/prism-atom-dark.css"
+            ]
+        }, 
+        "include-codeblock": {
+            "template": "ace", 
+            "unindent": true, 
+            "edit": true
+        }, 
+        "sharing": {
+            "weibo": true, 
+            "facebook": true, 
+            "twitter": true, 
+            "google": false, 
+            "instapaper": false, 
+            "vk": false, 
+            "all": [
+                "facebook", 
+                "google", 
+                "twitter", 
+                "weibo", 
+                "instapaper"
+            ]
+        }, 
+        "simple-page-toc": {
+            "maxDepth": 3, 
+            "skipFirstH1": true
+        }, 
+        "sitemap-general": {
+            "prefix": "http://gitbook.zhangjikai.com"
+        }, 
+        "anchor-navigation-ex": {
+            "isRewritePageTitle": false, 
+            "tocLevel1Icon": "fa fa-hand-o-right", 
+            "tocLevel2Icon": "fa fa-hand-o-right", 
+            "tocLevel3Icon": "fa fa-hand-o-right"
+        }, 
+        "sectionx": {
+            "tag": "b"
+        }, 
+        "favicon": {
+            "shortcut": "favicon.ico", 
+            "bookmark": "favicon.ico"
+        }
+    }
+}
