@@ -1,0 +1,421 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>gitbook-to-github-pages · Implement CI/CD with Docker and Jenkins</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="jrr">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-atom-dark.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="test.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="gitbook-to-github-pages.html">
+            
+                <a href="gitbook-to-github-pages.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    gitbook-to-github-pages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="test.html">
+            
+                <a href="test.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    test
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="test/test1.html">
+            
+                <a href="test/test1.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    test1
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="test/test11.html">
+            
+                <a href="test/test11.html">
+            
+                    
+                        <b>1.3.1.1.</b>
+                    
+                    test1.1
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >gitbook-to-github-pages</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x53D1;&#x5E03;&#x81EA;&#x5DF1;&#x7684;&#x7535;&#x5B50;&#x4E66;"><a name="&#x53D1;&#x5E03;&#x81EA;&#x5DF1;&#x7684;&#x7535;&#x5B50;&#x4E66;" class="anchor-navigation-ex-anchor" href="#&#x53D1;&#x5E03;&#x81EA;&#x5DF1;&#x7684;&#x7535;&#x5B50;&#x4E66;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x53D1;&#x5E03;&#x81EA;&#x5DF1;&#x7684;&#x7535;&#x5B50;&#x4E66;" class="plugin-anchor" href="#&#x53D1;&#x5E03;&#x81EA;&#x5DF1;&#x7684;&#x7535;&#x5B50;&#x4E66;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D1;&#x5E03;&#x81EA;&#x5DF1;&#x7684;&#x7535;&#x5B50;&#x4E66; </h2>
+<h3 id="&#x73AF;&#x5883;"><a name="&#x73AF;&#x5883;" class="anchor-navigation-ex-anchor" href="#&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x73AF;&#x5883;" class="plugin-anchor" href="#&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x73AF;&#x5883; </h3>
+<p>&#x5B89;&#x88C5;gitbook-cli</p>
+<pre class="language-"><code>$ npm i -g gitbook-cli
+$ npm install -g gitbook
+</code></pre><p>&#x65B0;&#x5EFA;book&#x9879;&#x76EE;</p>
+<pre class="language-"><code>$ cd book
+$ gitbook init
+</code></pre><p>&#x7136;&#x540E;&#x9879;&#x76EE;&#x591A;&#x51FA;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;</p>
+<pre class="language-"><code>gitbook/
+&#x251C;&#x2500;&#x2500; README.md
+&#x2514;&#x2500;&#x2500; SUMMARY.md
+</code></pre><p>README.md &#x548C; SUMMARY.md &#x662F;&#x4E24;&#x4E2A;&#x5FC5;&#x987B;&#x6587;&#x4EF6;&#xFF0C;README.md &#x662F;&#x5BF9;&#x4E66;&#x7C4D;&#x7684;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;&#x3002;SUMMARY.md &#x662F;&#x4E66;&#x7C4D;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x3002;<br>&#x7F16;&#x8F91;SUMMARY.md&#x7C7B;&#x4F3C;&#x5982;&#x4E0B;:</p>
+<pre class="language-"><code>* [&#x6807;&#x9898;1](README.md)
+  * [1.1 &#x6807;&#x9898;](md&#x6587;&#x4EF6;&#x8DEF;&#x5F84;)
+</code></pre><p>&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x4E86;,&#x76D1;&#x542C;&#x5728;&#x672C;&#x5730;&#x7684;4000&#x7AEF;&#x53E3;,&#x53EF;&#x4EE5;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x6253;&#x5F00;<a href="http://localhost:4000/" target="_blank">http://localhost:4000</a>&#x67E5;&#x770B;&#x4E66;&#x7C4D;&#x7684;&#x6548;&#x679C;</p>
+<pre class="language-"><code>$ gitbook serve
+</code></pre><p>&#x63A5;&#x4E0B;&#x6765;&#x4E66;&#x672C;&#x7684;&#x5177;&#x4F53;&#x5185;&#x5BB9;&#x5C31;&#x662F;&#x5728;&#x672C;&#x5730;&#x7F16;&#x8F91;markdown&#x6587;&#x6863;&#x4E86;&#x3002;</p>
+<h3 id="&#x53D1;&#x5E03;&#x7F51;&#x9875;&#x6587;&#x4EF6;&#x548C;md&#x6E90;&#x6587;&#x4EF6;"><a name="&#x53D1;&#x5E03;&#x7F51;&#x9875;&#x6587;&#x4EF6;&#x548C;md&#x6E90;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x53D1;&#x5E03;&#x7F51;&#x9875;&#x6587;&#x4EF6;&#x548C;md&#x6E90;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x53D1;&#x5E03;&#x7F51;&#x9875;&#x6587;&#x4EF6;&#x548C;md&#x6E90;&#x6587;&#x4EF6;" class="plugin-anchor" href="#&#x53D1;&#x5E03;&#x7F51;&#x9875;&#x6587;&#x4EF6;&#x548C;md&#x6E90;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D1;&#x5E03;&#x7F51;&#x9875;&#x6587;&#x4EF6;&#x548C;.md&#x6E90;&#x6587;&#x4EF6;</h3>
+<p>&#x5982;&#x679C;&#x8981;&#x628A;&#x7F51;&#x9875;&#x7684;.md&#x6E90;&#x6587;&#x4EF6;&#x4E5F;&#x63A8;&#x9001;&#x5230;github&#x7684;&#x4ED3;&#x5E93;&#x91CC;&#x7684;&#x4E00;&#x79CD;&#x5B9E;&#x73B0;&#x9014;&#x5F84;&#x4E3A;&#xFF1A;master&#x5206;&#x652F;&#x91CC;&#x653E;.md&#x6587;&#x4EF6;&#x3001;&#x7136;&#x540E;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;gh-pages&#x5206;&#x652F;&#x653E;&#x7F51;&#x9875;&#xFF0C;&#x518D;&#x63A8;&#x9001;&#x5230;github&#x4ED3;&#x5E93;&#x91CC;&#x3002;</p>
+<ul>
+<li>&#x7B2C;&#x4E00;&#x6B65;&#x5728;github&#x4E0A;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x7A7A;&#x4ED3;&#x5E93;,&#x6BD4;&#x5982;&#x8BF4;book&#xFF0C;&#x94FE;&#x63A5;&#x4E3A;
+<code>https://github.com/aaa/book.git</code></li>
+<li><p>&#x7136;&#x540E;&#x5728;&#x672C;&#x5730;&#x8FDB;&#x5165;&#x5230;&#x6E90;&#x7801;&#x6839;&#x76EE;&#x5F55;&#xFF0C;&#x5047;&#x8BBE;&#x5DF2;&#x7ECF;&#x901A;&#x8FC7;gitbook serve&#x547D;&#x4EE4;&#x521B;&#x5EFA;&#x4E86;_book&#x76EE;&#x5F55;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&#x251C;&#x2500;Append
+&#x251C;&#x2500;chapter1
+&#x251C;&#x2500;chapter2
+&#x2514;&#x2500;_book
+  &#x251C;&#x2500;Append
+  &#x251C;&#x2500;chapter1
+  &#x251C;&#x2500;chapter2
+  &#x2514;&#x2500;gitbook
+</code></pre><p>_book&#x4E3A;&#x7F51;&#x9875;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#x5939;&#x4E3A;.md&#x6240;&#x5728;&#x6587;&#x4EF6;&#x5939;&#x3002;</p>
+</li>
+<li><p>&#x6E90;&#x7801;&#x90A3;&#x4E2A;&#x5206;&#x652F;&#x9700;&#x8981;&#x5C06;_book&#x5C4F;&#x853D;&#x6389;&#xFF0C;&#x56E0;&#x6B64;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;.gitignore, &#x5185;&#x5BB9;&#x4E3A;_book,&#x4E5F;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x4E2A;&#x4EBA;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x9700;&#x8981;&#x5C4F;&#x853D;&#x7684;&#x540E;&#x7F00;&#x6216;&#x8005;&#x6587;&#x4EF6;&#x5939;&#x3002;&#x7136;&#x540E;&#x65B0;&#x5EFA;&#x4ED3;&#x5E93;&#xFF0C;&#x5C06;&#x6E90;&#x7801;&#x6DFB;&#x52A0;&#x81F3;master&#x5206;&#x652F;&#x5E76;&#x63A8;&#x9001;&#x5230;github&#xFF0C;&#x5177;&#x4F53;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>git init
+git add .
+git commit -m &quot;master&apos;s version&quot;
+git remote add origin https://github.com/aaa/book.git
+git push -u origin master
+</code></pre></li>
+<li><p>&#x5728;&#x4E66;&#x7C4D;_book&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;&#x4ED3;&#x5E93;&#x65B0;&#x5EFA;gh-pages&#x5206;&#x652F;&#xFF0C;&#x5E76;&#x5C06;&#x7F51;&#x9875;&#x6DFB;&#x52A0;&#x81F3;&#x8BE5;&#x5206;&#x652F;&#xFF0C;&#x6700;&#x540E;&#x63A8;&#x9001;&#x5230;github&#x3002;&#x5177;&#x4F53;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#xFF08;#&#x53F7;&#x540E;&#x4E3A;&#x8BF4;&#x660E;&#xFF09;&#xFF1A;</p>
+<pre class="language-"><code>cd _book \#&#x8FDB;&#x5165;&#x5230;_book&#x76EE;&#x5F55;
+git init \#&#x65B0;&#x5EFA;&#x4ED3;&#x5E93;
+git -rm .gitignore \#&#x5220;&#x9664;.gitignore&#x6587;&#x4EF6;
+git checkout --orphan gh-pages \# &#x65B0;&#x5EFA;&#x5206;&#x652F;gh-pages
+git add . \#&#x6DFB;&#x52A0;&#x6587;&#x4EF6;&#x5230;&#x8BE5;&#x5206;&#x652F;
+git commit -m &quot;html&apos;s branch&quot; \# &#x751F;&#x6210;&#x7248;&#x672C;
+git remote add origin https://github.com/aaa/book.git \#&#x7ED9;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x8BBE;&#x7F6E;&#x6635;&#x79F0;
+git push -u origin gh-pages \#&#x63A8;&#x9001;gh-pages&#x5206;&#x652F;&#x5185;&#x5BB9;&#x5230;&#x8FDC;&#x7A0B;
+</code></pre></li>
+<li><p>&#x6700;&#x540E;&#x5728;github&#x8FDB;&#x5165;&#x5230;&#x9879;&#x76EE;&#xFF0C;settings-GitHub Pages-source-&#x9009;&#x62E9;gh-pages&#xFF0C;&#x8FC7;&#x4E00;&#x4F1A;&#x6253;&#x5F00;Github pages&#x90A3;&#x91CC;&#x7ED9;&#x51FA;&#x7684;&#x7F51;&#x5740;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x7F51;&#x9875;&#x4E86;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x8FD9;&#x6837;&#x6765;&#x56DE;&#x5207;&#x6362;&#x975E;&#x5E38;&#x9EBB;&#x70E6;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5199;&#x4E2A;&quot;build.sh&quot;&#x811A;&#x672C;&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x4E00;&#x76F4;&#x5728;master&#x5206;&#x652F;&#x4E0A;&#x8FDB;&#x884C;&#x7F16;&#x8F91;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token shebang important">#!/bin/sh</span>
+<span class="token function">rm</span> -rf _book
+<span class="token keyword">echo</span> <span class="token string">&quot;Start building the gitbook!&quot;</span>
+gitbook build
+<span class="token function">cd</span> _book
+<span class="token keyword">echo</span> <span class="token string">&quot;Init a git repo, and create gh-pages branch.&quot;</span>
+<span class="token function">git</span> init 
+<span class="token function">git</span> checkout --orphan gh-pages
+<span class="token function">git</span> add <span class="token keyword">.</span>
+<span class="token keyword">echo</span> <span class="token string">&quot;commit gitbook file&quot;</span>
+<span class="token function">git</span> commit -m <span class="token string">&quot;Auto publisher&quot;</span>
+<span class="token function">git</span> remote add origin https://github.com/laniakea1990/test_book.git 
+<span class="token keyword">echo</span> <span class="token string">&quot;push gh-pages branch to origin&quot;</span>
+<span class="token function">git</span> push --force -u origin gh-pages <span class="token operator">&gt;</span> /dev/null 2<span class="token operator">&gt;</span><span class="token operator">&amp;</span>1
+</code></pre>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="test.html" class="navigation navigation-next " aria-label="Next page: test">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"gitbook-to-github-pages","level":"1.2","depth":1,"next":{"title":"test","level":"1.3","depth":1,"path":"test.md","ref":"test.md","articles":[{"title":"test1","level":"1.3.1","depth":2,"path":"test/test1.md","ref":"test/test1.md","articles":[{"title":"test1.1","level":"1.3.1.1","depth":3,"path":"test/test11.md","ref":"test/test11.md","articles":[]}]}]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus","simple-page-toc","prism","prism-themes","anchors","include-codeblock","emphasize","splitter","expandable-chapters-small","sectionx","anchor-navigation-ex","todo","disqus"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"disqus":{"useIdentifier":false,"shortName":"laniakea"},"emphasize":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":false,"showLevel":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"prism-themes":{},"expandable-chapters-small":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"jrr","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Implement CI/CD with Docker and Jenkins","language":"zh-hans","output.name":"site","gitbook":"*","description":"利用Docker及Jenkins Pipeline实现微服务的CI/CD"},"file":{"path":"gitbook-to-github-pages.md","mtime":"2017-10-09T09:24:20.732Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-10T01:45:37.361Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
