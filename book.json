@@ -20,7 +20,8 @@
         "expandable-chapters-small", 
         "sectionx", 
         "anchor-navigation-ex",
-        "todo"
+        "todo",
+        "disqus"
     ], 
     "pluginsConfig": {
         "theme-default": {
